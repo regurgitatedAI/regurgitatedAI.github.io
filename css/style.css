@@ -1,0 +1,16 @@
+h1 {
+  color: orange;
+  font-size: large;
+}
+
+h2 {
+  color: orchid;
+  font-size: medium;
+}
+p {
+  color: peru;
+}
+
+/* this is a comment, same shortcut ctrl shift 7   */
+
+/* for width and height that adjusts according to screen size use vw and vh  */
