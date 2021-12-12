@@ -1,4 +1,4 @@
-https://img.shields.io/github/license/regurgitatedAI/regurgitatedAI.github.io
+![](https://img.shields.io/github/license/regurgitatedAI/regurgitatedAI.github.io)
 
 # miibty
 
