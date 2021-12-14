@@ -6,4 +6,4 @@ This is a personal website.
 
 ## License
 
-This repository is distributed under the MIT license. 
+This repository is distributed under the [MIT license](LICENSE.md) 
