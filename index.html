@@ -5,7 +5,8 @@ https://www.youtube.com/watch?v=mU6anWqZJcc
 2. For an example of a nice looking website. 
 https://www.youtube.com/watch?v=oYRda7UtuhA -->
 
-
+<!-- TO DO: 
+1. Figure out why inetractive stuff doesnt work on small devices (phone/tablets) -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -18,25 +19,24 @@ https://www.youtube.com/watch?v=oYRda7UtuhA -->
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css">
 
 </head>
-<!--First comment--> 
+<!-- ----------intro---------- --> 
 
 <body>
 
     <section class="header">
         <nav>
             <a href="index.html"><img src= "resources/logo.png" width="150" height="150"></a>
-            <div class="nav-links">
-                <i class="fas fa-times"></i>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
                 <ul>
                     <li><a href="">HOME</a></li>
-                    <i class="fas fa-times"></i>
                     <li><a href="">ABOUT</a></li>
                     <li><a href="">BLOG</a></li>
                     <li><a href="">CONTACT</a></li>
                     
                 </ul>
             </div>
-            <i class="fa fa-bars"></i>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
         </nav>
 
         <div class="text-box">
@@ -50,12 +50,88 @@ https://www.youtube.com/watch?v=oYRda7UtuhA -->
 
     </section>
 
+<!-- ---------- posts---------- -->
+    <section class = "posts">
+        <h1>About</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti, dignissimos maiores veritatis quas repellendus nesciunt recusandae facilis animi doloremque autem at accusantium culpa cum incidunt?
+        </p>
+        <div class="row">
+            <div class="course-col">
+                <h3>easy</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae, quasi!</p>
+            </div>
+            <div class="course-col">
+                <h3>medium</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae, quasi!</p>
+            </div>
+            <div class="course-col">
+                <h3>hard</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae, quasi!</p>
+            </div>
+        </div>
+    </section>
+
+<!-- ----------stuff----------  -->
+    <section class="stuff">
+        <h1>My Stuff</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi suscipit praesentium dicta pariatur ab quibusdam?</p>
+
+        <div class="row">
+            <div class= "campus-col">
+                <img src="resources/miibty.png">
+                <div class="layer">
+                    <h3>Option A</h3>
+                </div>
+            </div>
+            <div class="campus-col">
+                <img src="resources/miibty.png">
+                <div class="layer">
+                    <h3>Option B</h3>
+                </div>
+            </div>
+            <div class="campus-col">
+                <img src="resources/miibty.png">
+                <div class="layer">
+                    <h3>Option C</h3>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+<!-- ----------career---------- -->
+<section class="career">
+    <h1>My career</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, laudantium.</p>
+    <div class="row">
+        <div class="career-col">
+            <img src="resources/yellow.jpg">
+            <h3>Awesome</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis debitis accusamus corporis, culpa officia repellat, nobis esse nam ut laudantium vel explicabo, nesciunt cum numquam.</p>
+        </div>
+    </div>
+
+</section>
+
 <!--     
     <h1>Welcome to my website</h1>
     <img src="resources/miibty.png" vw=100 alt="Logo">
     <br>
     <a href="https://www.youtube.com/" target="_blank"> Check out my Youtube Channel</a>
     <a href="/about.html">About</a> -->
+
+<!-- ----- Javascript for toggle menu ----- -->
+<script>
+    var navLinks = document.getElementById("navLinks")
+
+    function showMenu(){
+        navLinks.style.right= "0"; 
+    }
+    function hideMenu() {
+        navLinks.style.right = "-200px";
+    }
+</script>
+
 </body>
 </html> 
 
