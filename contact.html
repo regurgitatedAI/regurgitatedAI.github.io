@@ -1,0 +1,90 @@
+<!-- Learning html and css to create a personal website. 
+The tutorials used are: 
+1. To learn all the basics. 
+https://www.youtube.com/watch?v=mU6anWqZJcc
+2. For an example of a nice looking website. 
+https://www.youtube.com/watch?v=oYRda7UtuhA -->
+
+<!-- TO DO: 
+1. Figure out why inetractive stuff doesnt work on small devices (phone/tablets) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>miibty</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css">
+
+</head>
+<!-- ----------intro---------- --> 
+
+<body>
+
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src= "resources/logo.png" width="150" height="150"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="">BLOG</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+<!-- ---------- contact---------- -->
+    <section class = "contact">
+        <div class="row">
+            <div class="contact-col"></div>
+            <div>
+                <i class="fa fa-envelope"></i>
+                <span>
+                    <h5>regurgitatedAI@miibty.com</h5>
+                    <p>Have a question? Email us! </p>
+                </span>
+            </div>
+            <div class="contact-col"></div>
+                <form action="form-handler.php" method="post">
+                    <input type="text" name ="name" placeholder="Enter your name" required>
+                    <input type="email" name ="email" placeholder="Enter your email" required>
+                    <input type="text" name ="subject" placeholder="Enter your subject" required>
+                    <textarea  rows="10" name ="message" placeholder= "Message" required></textarea>
+                    <button type="submit"class= "btn">Send message</button>
+                </form>
+    </section>
+    </section>
+
+
+
+<!-- ----- Javascript for toggle menu ----- -->
+<script>
+    var navLinks = document.getElementById("navLinks")
+
+    function showMenu(){
+        navLinks.style.right= "0"; 
+    }
+    function hideMenu() {
+        navLinks.style.right = "-200px";
+    }
+</script>
+
+</body>
+</html> 
+
+<!-- useful shortcuts to keep in mind -->
+<!-- add a comment ctrl shift 7 -->
+<!-- divide screen home arrow (left/righ/up/down) -->
+<!-- create multiple cursors ctrl shift arrow (up/down) -->
+<!-- move a line alt arrow (up/down) -->
+<!-- selelt stuff shift arrow OR shift ctrl arrow -->
+<!-- select whole line ctrl fin -->
+<!-- to ckeck all of the keyboard shortcuts ctrl k ctrl s  -->
+<!-- create a new line from wherever ctrl enter  -->
+<!-- for documentation and tutorial check out mdn or w3schools  -->
