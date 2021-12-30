@@ -6,47 +6,47 @@
 
 // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-const canvas = document.querySelector(".canvas");
-const context = canvas.getContext("2d");
-const video = document.querySelector(".player");
-const refreshRate = 1000;
+// const canvas = document.querySelector(".canvas");
+// const context = canvas.getContext("2d");
+// const video = document.querySelector(".player");
+// const refreshRate = 1000;
 
-function getVideo() {
-  navigator.mediaDevices
-    .getUserMedia({ video: true, audio: false })
-    .then((webCam) => {
-      video.srcObject = webCam;
-      paintToCanvas();
-    })
-    .catch((err) => {
-      console.error("Oh no, you denied the webcam, no fun for you.", err);
-    });
-}
+// function getVideo() {
+//   navigator.mediaDevices
+//     .getUserMedia({ video: true, audio: false })
+//     .then((webCam) => {
+//       video.srcObject = webCam;
+//       paintToCanvas();
+//     })
+//     .catch((err) => {
+//       console.error("Oh no, you denied the webcam, no fun for you.", err);
+//     });
+// }
 
-function paintToCanvas() {
-  canvas.width = 1;
-  canvas.height = 1;
+// function paintToCanvas() {
+//   canvas.width = 1;
+//   canvas.height = 1;
 
-  setInterval(updateColour, refreshRate);
-}
+//   setInterval(updateColour, refreshRate);
+// }
 
-function updateColour() {
-  context.drawImage(video, 0, 0, canvas.width, canvas.height);
+// function updateColour() {
+//   context.drawImage(video, 0, 0, canvas.width, canvas.height);
 
-  let imageData = context.getImageData(0, 0, canvas.width, canvas.height);
+//   let imageData = context.getImageData(0, 0, canvas.width, canvas.height);
 
-  let r = imageData.data[0];
-  let g = imageData.data[1];
-  let b = imageData.data[2];
+//   let r = imageData.data[0];
+//   let g = imageData.data[1];
+//   let b = imageData.data[2];
 
-  let rgb = `rgb(${r}, ${g}, ${b})`;
+//   let rgb = `rgb(${r}, ${g}, ${b})`;
 
-  let root = document.documentElement;
+//   let root = document.documentElement;
 
-  root.style.setProperty("--colour-change", rgb);
-}
+//   root.style.setProperty("--colour-change", rgb);
+// }
 
-window.addEventListener("load", getVideo);
+// window.addEventListener("load", getVideo);
 
 // GSAP Animation
 var tongueOut = MorphSVGPlugin.pathDataToBezier("#tongue", { align: "#blob" });

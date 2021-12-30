@@ -7,7 +7,7 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. */
 
 :root {
-  --colour-change: rgb(0, 128, 128);
+  --colour-change: rgb(0, 0, 0);
 }
 
 .videoCont {
@@ -82,13 +82,19 @@ body {
 }
 
 .change {
-  fill: var(--colour-change);
-  transition: fill 0.8s ease-out;
+  /* fill: var(--colour-change);
+  transition: fill 0.8s ease-out; */
+  fill: #eec33d;
 }
 
 .changeLight {
+  /* fill: #fff; */
+  fill: #d3a110;
+  /* transition: fill 0.8s ease-out; */
+}
+
+#eye {
   fill: #fff;
-  transition: fill 0.8s ease-out;
 }
 
 #box {
