@@ -30,6 +30,11 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   position: absolute;
 }
 
+.msg {
+  position: relative;
+  align-items: center;
+}
+
 body {
   height: 100vh;
   margin: 0;

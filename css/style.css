@@ -83,14 +83,15 @@ nav img {
   border: 1px solid aliceblue;
   padding: 12px 34px;
   font-size: 13px;
-  background: transparent;
+  background: #000000;
   position: relative;
   cursor: pointer;
 }
 .btn:hover {
-  border: 1px solid rgb(53, 53, 53);
-  background: rgb(53, 53, 53);
+  border: 1px solid #eec33d;
+  background: #eec33d;
   transition: 1s;
+  color: #000000;
 }
 
 /* for phones */
@@ -132,8 +133,8 @@ nav .fa {
   }
 }
 
-/* ----------posts----------  */
-.posts {
+/* ----------regurgitatedAI----------  */
+.regurgitatedAI {
   width: 80%;
   margin: auto;
   text-align: center;
