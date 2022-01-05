@@ -180,7 +180,7 @@ h3 {
 
 /* ---------- stuff ---------- */
 
-.stuff {
+.chemistry {
   width: 80%;
   margin: auto;
   text-align: center;
@@ -234,29 +234,29 @@ h3 {
 
 /* ----------career---------- */
 
-.career {
+.finance {
   width: 80%;
   margin: auto;
   text-align: center;
   padding-top: 100px;
 }
-.career-col {
+.finance-col {
   flex-basis: 100%;
   border-radius: 1opx;
   margin-bottom: 5%;
   text-align: left;
 }
 
-.career-col img {
+.finance-col img {
   width: 100%;
   border-radius: 10px;
 }
 
-.career-col p {
+.finance-col p {
   padding: 0;
 }
 
-.career-col h3 {
+.finance-col h3 {
   margin-top: 16px;
   margin-bottom: 15px;
   text-align: left;
