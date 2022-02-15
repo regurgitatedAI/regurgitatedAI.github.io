@@ -38,7 +38,7 @@ nav img {
 .nav-links ul li a {
   color: aliceblue;
   text-decoration: none;
-  font-size: 13px;
+  font-size: 30px;
 }
 
 .nav-links ul li::after {
@@ -71,7 +71,7 @@ nav img {
 
 .text-box p {
   margin: 10px 0 40px;
-  font-size: 14px;
+  font-size: 24px;
   color: aliceblue;
 }
 
@@ -82,7 +82,7 @@ nav img {
   color: aliceblue;
   border: 1px solid aliceblue;
   padding: 12px 34px;
-  font-size: 13px;
+  font-size: 24px;
   background: #000000;
   position: relative;
   cursor: pointer;
@@ -101,7 +101,7 @@ nav .fa {
 
 @media only screen and (max-width: 700px) {
   .text-box h1 {
-    font-size: 20px;
+    font-size: 28px;
   }
   .nav-links ul li {
     display: block;
@@ -146,7 +146,7 @@ h1 {
 }
 p {
   color: rgb(53, 53, 53);
-  font-size: 14px;
+  font-size: 24px;
   font-weight: 300;
   line-height: 22px;
   padding: 10px;

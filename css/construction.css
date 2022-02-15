@@ -1,0 +1,40 @@
+html,
+body {
+  text-align: center;
+  padding: 150px;
+  height: 100%;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+body {
+  font: 20px Helvetica, sans-serif;
+  background: linear-gradient(
+    to right,
+    rgb(231, 211, 160) 45%,
+    rgb(158, 71, 76) 25%
+  );
+  color: #000;
+}
+
+article {
+  display: block;
+  text-align: left;
+  width: 650px;
+  margin: 0 auto;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #333;
+  text-decoration: none;
+}
+
+.uc_img {
+}
