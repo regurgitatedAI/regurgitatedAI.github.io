@@ -146,9 +146,9 @@ h1 {
 }
 p {
   color: rgb(53, 53, 53);
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 300;
-  line-height: 22px;
+  line-height: 1.6;
   padding: 10px;
 }
 
