@@ -18,21 +18,67 @@
 </head>
 
 <body>
-    <section class="header">
-        <nav>
-            <a href="index.html"><img src="resources/fred.png"></a>
-            <div class="nav-links" id="navLinks">
-                <i class="fa fa-times" onclick="hideMenu()"></i>
-                <ul>
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="about.html">ABOUT</a></li>
-                    <li><a href="contact.html">CONTACT</a></li>
-
-                </ul>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+        <div class="container nav">
+            <div class="brand">
+                <a href="index.html"><img src="resources/fred.png" alt="miibty logo"></a>
+                <h2>miibty</h2>
             </div>
-            <i class="fa fa-bars" onclick="showMenu()"></i>
-        </nav>
-        <h1>regurgitatedAI</h1>
-    </section>
+                    <nav>
+                        <div class="nav-links" id="navLinks">
+                            <a href="index.html">Home</a>
+                            <a href="about.html">About</a>
+                            <a href="contact.html">Contact</a>
+                        </div>
+                        <div class="header-actions">
+                            <a class="social-link" href="https://github.com/regurgitatedAI" aria-label="GitHub" target="_blank">
+                                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.73.5.75 5.48.75 11.77c0 4.92 3.19 9.1 7.61 10.57.56.1.76-.24.76-.53 0-.26-.01-.95-.01-1.86-3.09.67-3.74-1.49-3.74-1.49-.5-1.26-1.22-1.6-1.22-1.6-.99-.67.08-.66.08-.66 1.1.08 1.68 1.14 1.68 1.14.98 1.68 2.57 1.19 3.2.91.1-.71.38-1.19.69-1.47-2.47-.28-5.06-1.24-5.06-5.52 0-1.22.44-2.22 1.17-3.01-.12-.29-.51-1.47.11-3.06 0 0 .96-.31 3.15 1.15a10.95 10.95 0 0 1 2.87-.39 10.9 10.9 0 0 1 2.87.39c2.19-1.46 3.15-1.15 3.15-1.15.62 1.59.23 2.77.11 3.06.73.79 1.17 1.79 1.17 3.01 0 4.29-2.6 5.24-5.08 5.52.39.34.73 1.02.73 2.06 0 1.49-.01 2.69-.01 3.06 0 .29.2.64.77.53C19.07 20.86 22.25 16.68 22.25 11.77 22.25 5.48 17.27.5 12 .5z"/></svg>
+                            </a>
+                            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌗</button>
+                            <button class="nav-toggle" id="navToggle" aria-controls="navPanel" aria-expanded="false" aria-label="Toggle navigation">☰</button>
+                        </div>
+                    </nav>
+        </div>
+        <div class="nav-panel" id="navPanel" aria-hidden="true">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </header>
+
+    <main id="main">
+        <section>
+            <div class="container">
+                <h2>regurgitatedAI</h2>
+                <p class="muted">End-to-end machine learning tutorials covering math refreshers, ML 101, and MLOps for deploying models.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container text-center">
+            <p>&copy; 2025 regurgitatedAI — <a href="https://github.com/regurgitatedAI/regurgitatedAI.github.io/" target="_blank">Source on GitHub</a></p>
+        </div>
+    </footer>
+
+        <script>
+            const navToggle = document.getElementById('navToggle');
+            const navPanel = document.getElementById('navPanel');
+            navToggle && navToggle.addEventListener('click', ()=>{
+                const open = navPanel.classList.toggle('open');
+                navToggle.setAttribute('aria-expanded', open);
+                navPanel.setAttribute('aria-hidden', !open);
+            });
+
+            const themeToggle = document.getElementById('themeToggle');
+            const userPref = localStorage.getItem('site-theme');
+            if(userPref === 'light') document.body.classList.add('light');
+            themeToggle && themeToggle.addEventListener('click', ()=>{
+                const isLight = document.body.classList.toggle('light');
+                localStorage.setItem('site-theme', isLight ? 'light' : 'dark');
+            });
+        </script>
+
 </body>
 </html>
